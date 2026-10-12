@@ -1,0 +1,107 @@
+/* Based on Jon Barron's academic website template (https://jonbarron.info) */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #f09228;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 20px 0 40px;
+  background: #ffffff;
+}
+
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+strong {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+heading {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  display: block;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+papertitle {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+name {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 32px;
+}
+
+.one {
+  position: relative;
+}
+
+.two {
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.fade {
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+span.highlight {
+  background-color: #ffffd0;
+}
+
+/* Publication / project row spacing */
+.publications td {
+  padding: 16px 20px !important;
+  vertical-align: middle;
+}
+
+/* GitHub badge spacing */
+.publications a img[alt="GitHub Stars"] {
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* Small screens: stack the photo under the intro text */
+@media (max-width: 600px) {
+  .header-text,
+  .header-photo {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+  .header-photo img {
+    display: block;
+    max-width: 220px !important;
+    margin: 0 auto;
+  }
+}

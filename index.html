@@ -163,7 +163,7 @@
               <em>Startup project, Apr. 2025 – Present</em>
               <br>
               <p style="margin:0.5em 0 0 0">
-                Lingo helps non-native English speakers pick up slang, phrasal verbs, cultural references, and wordplay while watching YouTube, with real-time AI term detection and explanations rendered directly on the video. I led the project from ideation to launch: curated a 122GB raw + synthetic benchmark and built the data-to-eval pipeline to select cost-effective open-source and API models, trained a lightweight in-house slang-detection model as a baseline, and engineered the production stack (React + TypeScript front end, FastAPI + PostgreSQL back end, Dockerized on GCP with CI/CD to the Chrome Web Store).
+                A Chrome extension that helps non-native English speakers learn slang, phrasal verbs, and cultural references while watching YouTube, with real-time AI detection and explanations on the video.
               </p>
             </td>
           </tr>
@@ -185,7 +185,7 @@
               <a href="https://github.com/ZhuoyuanJiang/fashion-retrieval-agent">Code</a> /
               <a href="https://huggingface.co/DanJZY/audio-composed-fashion-item-retriever">Model</a>
               <p style="margin:0.5em 0 0 0">
-                An audio-native multimodal retrieval system for composed fashion search: point at a garment, speak a modification ("make it black"), and get the matching item. A two-tower joint-embedding architecture replaces the usual separate-encoder pipeline; across 3 retrieval architectures and 15+ model/training variants it reaches Recall@10 = 0.637 on a 59K-item benchmark, beating Marqo-FashionCLIP (0.533) and Qwen3-Embedding-8B (0.522). I synthesized a 56.7K-triplet, gender-balanced, multi-accent audio corpus across 110 speakers and built the distributed PEFT LoRA + bf16 contrastive training and evaluation stack on 8&times; A6000 nodes, with a Gradio demo for qualitative inspection.
+                An audio-native composed fashion retrieval system: show a garment, speak a modification ("make it black"), and get the matching item from the catalog.
               </p>
             </td>
           </tr>
@@ -207,7 +207,7 @@
               <a href="https://github.com/ZhuoyuanJiang/vlm_Qwen2VL_object_detection_LOCAL">Code</a> /
               <a href="https://huggingface.co/DanJZY/qwen2vl-nutrition-table-detector-GPTQ-INT4">Model</a>
               <p style="margin:0.5em 0 0 0">
-                Fine-tuned Qwen2-VL-7B with 4-bit NF4 QLoRA to localize nutrition tables on food packaging, raising the detection rate from 18% to 100% and mean IoU from 0.09 to 0.86. I built four training recipes (LLM-only LoRA, vision-only full fine-tuning, two-stage, joint LoRA) plus custom collators and ran systematic ablations. The model is quantized to GPTQ INT4 (2.4&times; compression, 64% faster decode, negligible accuracy loss) and deployed on NVIDIA Triton with a vLLM backend, giving 2.9&times; the throughput of Hugging Face serving.
+                Qwen2-VL-7B fine-tuned to localize nutrition-facts tables on food packaging, taken from training through quantization to production deployment.
               </p>
             </td>
           </tr>
@@ -229,7 +229,7 @@
               <a href="https://github.com/ZhuoyuanJiang/speechQwen2VL">Code</a> /
               <a href="https://huggingface.co/DanJZY/Qwen2-VL-7B-Speech">Model</a>
               <p style="margin:0.5em 0 0 0">
-                Extended Qwen2-VL-7B with a Whisper audio encoder and a learned projector to form an omni model that understands audio, vision, and language in one network. A two-stage recipe (modality alignment, then LoRA fine-tuning) scaled to 6&times; RTX 6000 Ada GPUs with DDP over 107K audio samples reaches 7.90% WER on the LargeScaleASR benchmark, down from 14.5% after alignment alone, while cutting epoch time 8&times;.
+                An omni model that extends Qwen2-VL-7B with speech understanding, so one network handles audio, vision, and language.
               </p>
             </td>
           </tr>
@@ -251,7 +251,7 @@
               <a href="https://github.com/ZhuoyuanJiang/SmolLM-GEC-SFT-DPO">Code</a> /
               <a href="https://huggingface.co/DanJZY/SmolLM-135M-GEC-SFT-DPO">Model</a>
               <p style="margin:0.5em 0 0 0">
-                A 135M-parameter grammar-correction model that fixes only the errors and keeps the writer's voice instead of rewriting the sentence. I built the end-to-end pipeline (SFT, a custom ~19K-pair preference dataset, then DPO/IPO) with hyperparameter search on 8&times; RTX 3090 GPUs, improving BLEU from 0.051 to 0.500 over the base model; preference optimization alone adds +190% BLEU over the initial fine-tuned model.
+                A 135M-parameter grammar-correction model that fixes only the errors and keeps the writer's voice instead of rewriting the sentence.
               </p>
             </td>
           </tr>
